@@ -1,1 +1,1 @@
-web: chatbot-moviemood
+web: go run main.go
