@@ -126,7 +126,7 @@ func handleChat(w http.ResponseWriter, r *http.Request) {
 			} else {
 				w.WriteHeader(http.StatusInternalServerError)
 			}
-			writeJSON(w, response)
+			fmt.Fprintln(w, response["message"])
 		}
 		
 	} else {
