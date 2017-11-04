@@ -88,7 +88,8 @@ func handleWelcome(w http.ResponseWriter, r *http.Request) {
 		w.WriteHeader(http.StatusInternalServerError)
 		fmt.Fprintln(w, "The server can not generate a UUID now, try again later!")
 	}
-
+	
+	w.Header().Set("Content-Type", "application/json")
 	jsonData := map[string]string{"message": "Welcome to MovieMood.\nHere are the comands you can use: {Movie [MOVIE_NAME], Actor/Actress [ACTOR_NAME/ACTRESS_NAME], Suggest}", "uuid": uuid}
 	users = append(users, User{UUID: uuid})
 	json.NewEncoder(w).Encode(jsonData)
