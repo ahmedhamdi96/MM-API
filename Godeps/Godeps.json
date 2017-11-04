@@ -1,5 +1,5 @@
 {
-	"ImportPath": "chatbot-moviemood",
+	"ImportPath": "github.com/chatbot-moviemood",
 	"GoVersion": "go1.8",
 	"GodepVersion": "v79",
 	"Packages": [
